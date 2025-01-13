@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options = {
     nvim-lint.enable = lib.mkEnableOption "Enable nvim-lint module";
@@ -7,20 +12,20 @@
     plugins.lint = {
       enable = true;
       lintersByFt = {
-        c = [ "cpplint" ];
-        cpp = [ "cpplint" ];
-        go = [ "golangci-lint" ];
-        nix = [ "statix" ];
-        lua = [ "selene" ];
-        python = [ "flake8" ];
-        javascript = [ "eslint_d" ];
-        javascriptreact = [ "eslint_d" ];
-        typescript = [ "eslint_d" ];
-        typescriptreact = [ "eslint_d" ];
-        json = [ "jsonlint" ];
-        java = [ "checkstyle" ];
-        haskell = [ "hlint" ];
-        bash = [ "shellcheck" ];
+        c = [ "${pkgs.cpplint}" ];
+        cpp = [ "${pkgs.cpplint}" ];
+        go = [ "${pkgs.golangci-lint}" ];
+        nix = [ "${pkgs.statix}" ];
+        lua = [ "${pkgs.selene}" ];
+        python = [ "${pkgs.flake8}" ];
+        javascript = [ "${pkgs.eslint_d}" ];
+        javascriptreact = [ "${pkgs.eslint_d}" ];
+        typescript = [ "${pkgs.eslint_d}" ];
+        typescriptreact = [ "${pkgs.eslint_d}" ];
+        json = [ "${pkgs.jsonlint}" ];
+        java = [ "${pkgs.checkstyle}" ];
+        haskell = [ "${pkgs.hlint}" ];
+        bash = [ "${pkgs.shellcheck}" ];
       };
     };
   };
