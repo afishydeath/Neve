@@ -17,12 +17,12 @@
         go = [ "${pkgs.golangci-lint}" ];
         nix = [ "${pkgs.statix}" ];
         lua = [ "${pkgs.selene}" ];
-        python = [ "${pkgs.flake8}" ];
+        python = [ "${pkgs.python312Packages.flake8}" ];
         javascript = [ "${pkgs.eslint_d}" ];
         javascriptreact = [ "${pkgs.eslint_d}" ];
         typescript = [ "${pkgs.eslint_d}" ];
         typescriptreact = [ "${pkgs.eslint_d}" ];
-        json = [ "${pkgs.jsonlint}" ];
+        json = [ "${pkgs.nodePackages.jsonlint}" ];
         java = [ "${pkgs.checkstyle}" ];
         haskell = [ "${pkgs.hlint}" ];
         bash = [ "${pkgs.shellcheck}" ];
