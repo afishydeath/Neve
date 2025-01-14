@@ -15,7 +15,7 @@
         c = [ "${pkgs.cpplint}" ];
         cpp = [ "${pkgs.cpplint}" ];
         go = [ "${pkgs.golangci-lint}" ];
-        nix = [ "${pkgs.statix}" ];
+        nix = [ "${pkgs.statix}/bin/statix" ];
         lua = [ "${pkgs.selene}" ];
         python = [ "${pkgs.python312Packages.flake8}" ];
         javascript = [ "${pkgs.eslint_d}" ];
